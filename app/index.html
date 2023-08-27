@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Главная | Название проекта</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css">
+    <link rel="stylesheet" href="assets/css/main.min.css?v=1693156146975">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico">
+  </head>
+  <body>
+    <header class="header"> 
+      <div class="container"> <a class="logo" href="/"><img src="assets/upload/logo.svg"></a>
+        <nav class="header__nav"> <a class="header__nav-link header__nav-link--active" href="#">Бизнес </a><a class="header__nav-link" href="#">О нас </a><a class="header__nav-link" href="#">Цены </a><a class="header__nav-link" href="#">Оформить заказ </a></nav>
+        <div class="header__burger"></div>
+      </div>
+    </header>
+    <div class="mobile-menu"> 
+      <div class="mobile-menu__nav"> <a class="mobile-menu__nav-link" href="#">Бизнес</a><a class="mobile-menu__nav-link" href="#">О нас</a><a class="mobile-menu__nav-link" href="#">Цены</a><a class="mobile-menu__nav-link" href="#">Оформить заказ</a></div>
+    </div>
+    <main class="main">
+      <section class="banner"> 
+        <div class="banner__image"> <img src="assets/upload/banner-image.jpg"></div>
+        <div class="container"> 
+          <div class="banner__info">
+            <h1><span>Lorem ipsum </span>dolor sit ametconsectetur <span>adipiscing</span></h1>
+            <div class="banner__text"> 
+              <p>At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
+              <ul> 
+                <li>Totam rem aperiam eaque ipsa</li>
+                <li>Sit voluptatem accusantium doloremque laudantium</li>
+                <li>Sed ut perspiciatis, unde omnis iste natus error</li>
+              </ul>
+            </div>
+            <div class="banner__buttons"> 
+              <div class="btn btn--blue">заказать</div>
+              <div class="btn btn--white">подробнее</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="ordering">
+        <div class="container"> 
+          <h2>Оформление <span>Заказа</span></h2>
+          <div class="ordering__subtitle">Перед заполнением формы ознакомьтесь с нашей схемой работы!</div>
+          <div class="ordering__steps">
+            <div class="ordering__step"> 
+              <div class="ordering__step-image"><img src="assets/upload/order-image-1.svg"></div>
+              <div class="ordering__step-text">Lorem ipsum dolor sit amet</div>
+            </div>
+            <div class="ordering__step"> 
+              <div class="ordering__step-image"><img src="assets/upload/order-image-2.svg"></div>
+              <div class="ordering__step-text">Сonsecteturadipiscing elit</div>
+            </div>
+            <div class="ordering__step"> 
+              <div class="ordering__step-image"><img src="assets/upload/order-image-3.svg"></div>
+              <div class="ordering__step-text">Sed do eiusmod tempor</div>
+            </div>
+            <div class="ordering__step"> 
+              <div class="ordering__step-image"><img src="assets/upload/order-image-4.svg"></div>
+              <div class="ordering__step-text">Esse cillum dolore eu fugiat</div>
+            </div>
+            <div class="ordering__step"> 
+              <div class="ordering__step-image"><img src="assets/upload/order-image-5.svg"></div>
+              <div class="ordering__step-text">Excepteur sint occaecat cupidatat non proident</div>
+            </div>
+          </div>
+          <form class="ordering__form" action="">
+            <div class="ordering__form-inputs">
+              <div class="select"> 
+                <div class="select__top"> 
+                  <div class="select__top-title">Выберите тип системы</div>
+                  <div class="select__top-arrow"></div>
+                  <input type="hidden" name="f_system" id="select-system">
+                </div>
+                <div class="select__wrap">
+                  <div class="select__inside"> 
+                    <div class="select__link">Пункт меню 1</div>
+                    <div class="select__link">Пункт меню 2</div>
+                    <div class="select__link">Пункт меню 3</div>
+                    <div class="select__link">Пункт меню 4</div>
+                    <div class="select__link">Пункт меню 5</div>
+                    <div class="select__link">Пункт меню 5</div>
+                    <div class="select__link">Пункт меню 5</div>
+                    <div class="select__link">Пункт меню 5</div>
+                  </div>
+                </div>
+              </div>
+              <div class="input-group"> 
+                <input type="text" name="f_email" id="user-email" placeholder="Ваш e-mail">
+              </div>
+              <div class="input-group"> 
+                <input type="text" name="f_name" id="user-name" placeholder="Ваше имя">
+              </div>
+            </div>
+            <div class="ordering__form-bottom"> 
+              <div class="ordering__form-range">
+                <div class="ordering__form-range-top">Sed ut perspiciatis, unde omnis iste natus<span>0 %</span></div>
+                <input class="js-range-slider" type="text" name="f_range" value="">
+              </div>
+              <div class="file-btn"> 
+                <input type="file" name="f_file" id="user-file">
+                <label for="user-file"> <img src="assets/upload/file-icon.svg"><span>Прикрепить файл</span></label>
+              </div>
+            </div>
+            <button class="btn btn--blue">Отправить</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"> 
+      <div class="container"> 
+        <div class="footer__copyright">© 2018 «LoremIpsum.net» Все права защищены.</div>
+        <div class="footer__payments">
+          <div class="footer__payment"><img src="assets/upload/payment-icon-1.svg">QIWI wallet</div>
+          <div class="footer__payment"><img src="assets/upload/payment-icon-2.svg">Yandex Money</div>
+          <div class="footer__payment"><img src="assets/upload/payment-icon-3.svg">Web Money</div>
+        </div>
+        <div class="footer__contacts"> <a class="footer__contact" href="mailto:info@ipsum228.com"> <img src="assets/upload/footer-contacts-icon-1.svg">info@ipsum228.com</a><a class="footer__contact" href="#"> <img src="assets/upload/footer-contacts-icon-2.svg">Мы вконтакте</a></div>
+      </div>
+    </footer>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=eb505fe6-1302-4c4e-8cbc-e50446915e83"></script>
+    <script src="assets/js/libs.min.js?v=1693156146975"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <script src="assets/js/scripts.min.js?v=1693156146975"></script>
+  </body>
+</html>

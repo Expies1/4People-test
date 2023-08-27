@@ -1,0 +1,127 @@
+@import "vars"
+@import "_font_size"
+@import "_mixins/media"
+
+
+input, textarea, select
+	-webkit-appearance: none
+	border-radius: 0
+
+.clearfix
+	position: relative
+	&:before, &:after
+		content: ""
+		display: table
+		clear: both
+
+input, textarea
+	border: #666 1px solid
+	outline: none
+
+html
+	scroll-behavior: smooth
+
+html, body
+	height: 100%
+	min-height: 100%
+	&.is-active
+		overflow: hidden
+
+body
+	min-width: 320px
+	-webkit-font-smoothing: antialised
+	letter-spacing: 0
+	font-family: $Lato
+	font-weight: normal
+	overflow-x: hidden
+	color: var(--text)
+	background-color: var(--white)
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+
+.main 
+	flex-grow: 1
+	
+img
+	height: auto
+	max-width: 100%
+	max-height: 100%
+
+a, button
+	cursor: pointer
+	&:focus, &:active, &:hover
+		text-decoration: none
+		outline: none
+
+.container
+	display: block
+	margin: 0 auto
+	padding: 0 10px
+	width: 100%
+	max-width: 1190px
+
+
+.d-flex
+	display: flex
+
+.f-wrap
+	flex-wrap: wrap
+
+.xs-d-none
+	display: none
+
+.md-d-block
+	+min-width(992)
+		display: block
+
+.xs-d-block
+	display: block
+
+.md-d-block
+	+min-width(992)
+		display: block
+
+.md-d-none
+	+min-width(992)
+		display: none
+
+.f-column
+	flex-direction: column
+
+.justify-center
+	justify-content: center
+
+.justify-end
+	justify-content: flex-end
+
+.space-between
+	justify-content: space-between
+
+.align-start
+	align-items: flex-start
+
+.align-center
+	align-items: center
+
+.center
+	display: block
+	text-align: center
+
+.fancybox-slide--html
+	padding: 0
+	+min-width(768)
+		padding: 50px 0
+
+.fancybox-slide--html
+	.fancybox-close-small
+		display: none
+
+[name="org"]
+	display: none !important
+
+.overflow
+	overflow: hidden
+
+.hidden 
+	display: none !important

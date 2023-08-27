@@ -1,0 +1,102 @@
+@import "vars"
+@import "_font_size"
+@import "_mixins/media"
+
+.header 
+  padding: 10px 0
+  background: rgba(16, 16, 29, 0.90)
+  position: fixed
+  width: 100%
+  z-index: 222
+  transition: var(--time)
+  +min-width(1080)
+    padding: 34px 0
+  & .container 
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__nav
+    display: none 
+    align-items: center
+    +min-width(1080)
+      display: flex
+
+    &-link 
+      display: block
+      font-size: 13px
+      line-height: normal
+      text-transform: uppercase
+      font-weight: 600
+      color: var(--white)
+      margin-right: 60px
+      transition: color var(--time)
+      &:last-child
+        margin-right: 0
+      &:hover 
+        color: var(--link)
+      &--active 
+        color: var(--link)
+  &--hide
+    padding: 10px 0
+  &__burger 
+    width: 40px
+    height: 40px
+    border-radius: 12px
+    position: relative
+    background: var(--blue)
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: var(--time)
+    +min-width(1080)
+      display: none
+    &::after
+      position: absolute
+      content: ""
+      width: 20px
+      height: 18px
+      transition: var(--time)
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='18' viewBox='0 0 20 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='0.5' width='20' height='3' rx='1.5' fill='white'/%3E%3Crect y='7.5' width='20' height='3' rx='1.5' fill='white'/%3E%3Crect y='14.5' width='10' height='3' rx='1.5' fill='white'/%3E%3C/svg%3E%0A")
+    &--active 
+      background: #FF5C5C
+      &::after
+        width: 18px
+        height: 18px
+        background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.867188' y='15.0117' width='20' height='3' rx='1.5' transform='rotate(-45 0.867188 15.0117)' fill='white'/%3E%3Crect x='2.98828' y='0.869141' width='20' height='3' rx='1.5' transform='rotate(45 2.98828 0.869141)' fill='white'/%3E%3C/svg%3E%0A")
+.mobile-menu 
+  position: fixed
+  width: 100%
+  height: 100%
+  z-index: 222
+  background: var(--white)
+  top: 60px
+  transition: opacity var(--time), visibility var(--time)
+  padding: 20px 10px
+  overflow-y: auto
+  opacity: 0
+  visibility: hidden
+  &--active 
+    opacity: 1
+    visibility: visible
+  &__nav
+    &-link
+      display: block
+      text-align: center
+      font-size: 14px
+      line-height: 16px
+      color: var(--black)
+      text-transform: uppercase
+      font-weight: 700
+      margin-bottom: 20px
+      transition: color var(--time)
+      &:last-child
+        margin-bottom: 0
+      &:hover 
+        color: var(--blue)
+
+
+
+
+
+
+    

@@ -1,0 +1,83 @@
+extends ./layout.pug
+block vars
+	- var title = 'Главная';
+	- var image = "assets/image/";
+	- var upload = "assets/upload/";
+
+block content
+	section.banner 
+		.banner__image 
+			img(src="" + upload + "banner-image.jpg") 
+		.container 
+			.banner__info
+				h1
+					span Lorem ipsum 
+					| dolor sit ametconsectetur 
+					span adipiscing
+				.banner__text 
+					p At vero eos et accusamus et iusto odio dignissimos ducimus!
+					ul 
+						li Totam rem aperiam eaque ipsa
+						li Sit voluptatem accusantium doloremque laudantium
+						li Sed ut perspiciatis, unde omnis iste natus error
+				.banner__buttons 
+					.btn.btn--blue заказать
+					.btn.btn--white подробнее
+	section.ordering
+		.container 
+			h2 Оформление 
+				span Заказа
+			.ordering__subtitle Перед заполнением формы ознакомьтесь с нашей схемой работы!
+			.ordering__steps
+				.ordering__step 
+					.ordering__step-image
+						img(src="" + upload + "order-image-1.svg") 
+					.ordering__step-text Lorem ipsum dolor sit amet
+				.ordering__step 
+					.ordering__step-image
+						img(src="" + upload + "order-image-2.svg") 
+					.ordering__step-text Сonsecteturadipiscing elit
+				.ordering__step 
+					.ordering__step-image
+						img(src="" + upload + "order-image-3.svg") 
+					.ordering__step-text Sed do eiusmod tempor
+				.ordering__step 
+					.ordering__step-image
+						img(src="" + upload + "order-image-4.svg") 
+					.ordering__step-text Esse cillum dolore eu fugiat
+				.ordering__step 
+					.ordering__step-image
+						img(src="" + upload + "order-image-5.svg") 
+					.ordering__step-text Excepteur sint occaecat cupidatat non proident
+			form.ordering__form(action="")
+				.ordering__form-inputs
+					.select 
+						.select__top 
+							.select__top-title Выберите тип системы
+							.select__top-arrow
+							input(type="hidden" name="f_system" id="select-system")
+						.select__wrap
+							.select__inside 
+								.select__link Пункт меню 1
+								.select__link Пункт меню 2
+								.select__link Пункт меню 3
+								.select__link Пункт меню 4
+								.select__link Пункт меню 5
+								.select__link Пункт меню 5
+								.select__link Пункт меню 5
+								.select__link Пункт меню 5
+					.input-group 
+						input(type="text" name="f_email" id="user-email" placeholder='Ваш e-mail')
+					.input-group 
+						input(type="text" name="f_name" id="user-name" placeholder='Ваше имя')
+				.ordering__form-bottom 
+					.ordering__form-range
+						.ordering__form-range-top Sed ut perspiciatis, unde omnis iste natus
+							span 0 %
+						input.js-range-slider(type='text' name='f_range' value='')
+					.file-btn 
+						input(type="file" name="f_file" id="user-file")
+						label(for="user-file") 
+							img(src="" + upload + "file-icon.svg")
+							span Прикрепить файл
+				button.btn.btn--blue Отправить

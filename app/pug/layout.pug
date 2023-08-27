@@ -1,0 +1,36 @@
+block vars
+	-
+		var title = typeof title !== 'undefined' ? title : null;
+-
+	var baseDir = 'assets/';
+
+mixin image(src)
+	picture
+		img(class!=attributes.class src="assets/upload/" + src alt="")
+
+doctype html
+html
+	head
+		if title !== null
+			title= title + " | Название проекта"
+		link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css')
+		link(rel="stylesheet" href=`${baseDir}css/main.min.css?v=${Date.now()}`)
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(rel="icon" href="favicon.ico")
+
+	body
+
+		include ./include/header.pug
+
+		main.main
+			block content
+
+		include ./include/footer.pug
+
+		block scripts
+			script(src=`https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=eb505fe6-1302-4c4e-8cbc-e50446915e83`)
+			script(src=`${baseDir}js/libs.min.js?v=${Date.now()}`)
+			script(src='https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js')
+			script(src=`${baseDir}js/scripts.min.js?v=${Date.now()}`)
